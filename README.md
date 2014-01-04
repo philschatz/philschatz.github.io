@@ -1,1 +1,1 @@
-The website of <https://philschatz.github.io>. Also contains redirects of personal projects.
+The website of <https://github.com/philschatz>. Also contains redirects of personal projects.
