@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+redcarpet:
+  extensions:     ['no_intra_emphasis', 'fenced_code_blocks', 'autolink', 'tables', 'with_toc_data']
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            "Phil's Musings"
+tagline:          'things that keep me up at night'
+description:      'Projects I tinker with and lessons learned making beautiful, free textbooks for the world'
+url:              http://philschatz.com
+
+author:
+  name:           'Philip Schatz'
+  url:            https://github.com/philschatz
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/philschatz/philschatz.github.com
