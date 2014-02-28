@@ -1,0 +1,4 @@
+#sidebar-checkbox:checked ~ .wrap .container {
+  margin-left: 5rem;
+}
+
