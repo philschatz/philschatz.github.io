@@ -7,7 +7,7 @@ CSS is meant to style structured HTML.
 
 ## But, it's not good enough to make books
 
-For some things, you need to:
+Sometimes you need to:
 
 1. style an element based on what's inside (notes with a title inside)
 2. move elements somewhere else in the book (answers to the back)
