@@ -252,6 +252,10 @@ a.sidebar-nav-item:focus {
 .posts .post .more-button {
   cursor: pointer;
 }
+.posts .post .more-button:hover {
+  text-decoration: underline;
+}
+
 
 
 @media (min-width: 30.1rem) {
