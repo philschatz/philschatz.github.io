@@ -5,7 +5,7 @@ title: Introducing css-polyfills.js
 
 CSS is meant to style structured HTML.
 
-## But, it's not good enough to make books
+## But, it's not good enough to make textbooks
 
 Sometimes you need to:
 
