@@ -243,7 +243,7 @@ a.sidebar-nav-item:focus {
 .posts .post .more-checkbox,
 .posts .post .more-checkbox:not(:checked) ~ :not(:nth-child(-n+10)):not(.more-button),
 /* If the post is short, do not show the "More" button */
-.posts .post .more-button:nth-child(-n+10),
+.posts .post .more-button:nth-child(-n+11),
 /* Hide the "More" button once it has been clicked */
 .posts .post .more-checkbox:checked ~ .more-button {
   display: none;
