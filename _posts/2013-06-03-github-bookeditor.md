@@ -24,6 +24,6 @@ It turns out, quite a bit. If each book is a repository whose contents is an _Un
 
 So, I took our editor and made it save EPUB files to GitHub and viola! a book editor using GitHub!
 
-- the [WYSIWYG Book Editor](https://github.com/oerpub/github-book-editor) and [Demo](http://oerpub.github.io/github-book-editor)
-- the [PDF-CI server](https://github.com/philschatz/pdf-ci) and server that [generates PDFs on commit](http://pdf.oerpub.org)
+- the [WYSIWYG Book Editor](https://github.com/oerpub/github-bookeditor) and [Demo](http://oerpub.github.io/github-bookeditor)
+- the [PDF-CI server](https://github.com/philschatz/pdf-ci) and demo that [generates PDFs on commit](http://pdf.oerpub.org)
 - example of the [book reader](http://philschatz.com/epub-anatomy/reader/) using `gh-pages` and [epub.js](https://github.com/futurepress/epub.js)
