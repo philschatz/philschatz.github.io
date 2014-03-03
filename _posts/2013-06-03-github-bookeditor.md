@@ -23,6 +23,6 @@ It turns out, quite a bit. If each book is a repository whose contents is an Unz
 
 So, I took our editor and made it save EPUB files to GitHub and viola! a book editor using GitHub!
 
-- the [Book Editor Demo](http://oerpub.github.io/github-book-editor) for the WYSIWYG editor ([code](https://github.com/oerpub/github-book-editor)).
-- the [PDF-CI server](http://pdf.oerpub.org) for generating PDFs on commit ([code](https://github.com/philschatz/pdf-ci))
+- the [WYSIWYG Book Editor](https://github.com/oerpub/github-book-editor) and [Demo](http://oerpub.github.io/github-book-editor)
+- the [PDF-CI server](https://github.com/philschatz/pdf-ci) and server that [generates PDFs on commit](http://pdf.oerpub.org)
 - example of the [book reader](http://philschatz.com/epub-anatomy/reader/) using `gh-pages` and [epub.js](https://github.com/futurepress/epub.js)

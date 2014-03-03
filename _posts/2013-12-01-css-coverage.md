@@ -3,56 +3,22 @@ layout: post
 title: CSS Coverage for Javascript Unit Tests
 ---
 
+There are many CSS coverage projects but none plug directly into unit tests, instrumenting at the same time as the JavaScript coverage.
 
-In this post I'll build on the [CSS Polyfills](/css-polyfills) project mentioned earlier.
+Assuming you have BlanketJS and Mocha tests, just grab [css-coverage.js](https://github.com/philschatz/css-coverage.js) and add the following into the test harness HTML file :
 
-## CSS Coverage
+    <script src="css-coverage.js"></script>
+    <link rel="stylesheet/less" href="path/to/less/file" />
 
-Code coverage is important because code should be exercised to prevent "bitrot".
+## Less.js + Mocha + BlanketJS
 
-There are a couple tools that do coverage for CSS files but for groups that use extensions to CSS (like publishers) the coverage will always be incomplete.
+The coverage script uses the `less.tree` AST to parse all the selectors and the `debugInfo` data to get line numbers. It adds a `testdone` hook to Mocha that runs all the selectors on the page. Then, the line number and coverage counts are given to BLanketJS so LESS/CSS files are included in the coverage report.
 
-Fortunately, [CSS Polyfills](/css-polyfills) can output coverage information by just adding a listener. With it you can find the number of selectors that did not match any elements. If you run it after every unit test then *viola*, CSS coverage for your tests!
+The coverage tool uses another project called [css-polyfills.js](/css-polyfills.js/) will be covered in another post.
 
-## CSS Diffs
+Check out the [Mocha + BlanketJS demo](/css-coverage.js/test/mocha-demo/) and the [github repo](https://github.com/philschatz/css-coverage.js) for more!
 
-Our textbooks are frequently hundreds of pages long and use a single CSS file, so making a CSS change can change content in unexpected places.
+## Other Features
 
-Again, [CSS Polyfills](/css-polyfills) and a little XSLT file makes this easy.
-
-[CSS-Diff](https://github.com/philschatz/css-diff) will take an HTML and CSS file and produce an HTML file with all the styling "baked" in.
-Then, the provided XSLT file can compare 2 "baked" HTML files and inject `<span>` tags whenever the styles differ.
-
-
-Style Baker code (shortened for brevity):
-
-    class StyleBaker
-      rules:
-        # Match all rules and squirrel the styles away
-        '*': (env, name) ->
-          $context.addClass('js-polyfill-styles')
-          styles = $context.data('js-polyfill-styles') or {}
-          rules = []
-          for arg, i in arguments
-            continue if i < 2
-            rules.push(arg.eval(env).toCSS(env))
-
-          styles[name] ?= style
-          $context.data('js-polyfill-styles', styles)
-
-    # Run Polyfills and bake in the styles
-    polyfills = new CSSPolyfills(new StyleBaker())
-    polyfills.run $root, lessFile, (err, newCSS) ->
-
-      # Bake in the styles.
-      console.log('Baking styles...')
-      $root.find('.js-polyfill-styles').each (i, el) ->
-        $el = $(el)
-        style = []
-        for ruleName, ruleStr of $el.data('js-polyfill-styles')
-          style.push("#{ruleName}:#{ruleStr}; ")
-
-        $el.attr('style', style.join(''))
-
-
-See the [CSS-Diff](https://github.com/philschatz/css-diff) project to run it from the commandline.
+- Loading LESS files using RequireJS is supported with 0 additional work
+- Instrumented less files that import other files are automatically instrumented
