@@ -11,12 +11,12 @@ Sometimes you need to:
 2. change link text based on the target (`See Figure 2a` vs `See Table 4.3`)
 3. move elements somewhere else in the book (answers to the back)
 
-Well, now there is [css-polyfills.js](/css-polyfills.js/), based on some great [CSS3](http://www.w3.org/TR/css3-content/) [specs](http://www.w3.org/TR/css3-gcpm/), [Sizzle](http://sizzlejs.com), and [selector-set](https://github.com/josh/selector-set).
+Well, now there is **[css-polyfills.js](/css-polyfills.js/)**, based on some great [CSS3](http://www.w3.org/TR/css3-content/) [specs](http://www.w3.org/TR/css3-gcpm/), [Sizzle](http://sizzlejs.com), and [selector-set](https://github.com/josh/selector-set).
 
 
-## Examples (from Bootstrap)
+## Simple Examples (from Bootstrap)
 
-With [css-polyfills.js](/css-polyfills.js/) you can do things that are not possible using CSS in browsers. Bootstrap's [Dismissable Alerts](http://getbootstrap.com/components/#alerts-dismissable) require adding a special class on the alert if it contains a close button. This can be accomplished without adding the `alert-dismissable` class by using `:has`:
+With **[css-polyfills.js](/css-polyfills.js/)** you can do things that are not possible using CSS in browsers. Bootstrap's [Dismissable Alerts](http://getbootstrap.com/components/#alerts-dismissable) require adding a special class on the alert if it contains a close button. This can be accomplished without adding the `alert-dismissable` class by using `:has`:
 
     .alert:has(> .close) { /* Styles for `.alert-dismissable` */ }
 
@@ -27,6 +27,9 @@ You can construct the 2 additional elements (`.modal`, `.modal-dialog`) around `
     .modal-content                  { ... }
     .modal-content::outside         { /* Styles for `.modal-dialog` */}
     .modal-content::outside::outside{ /* Styles for `.modal` */ }
+
+
+## More Examples
 
 You can even style links depending on the target:
 
@@ -43,6 +46,8 @@ Or, you can move elements down the page (ie collate footnotes at the bottom of a
     #footnotes {
       content: pending(footnotes-area);
     }
+
+You can also create the linkable footnotes on wikipedia by keeping the references near the content and use CSS to create links and move the references to the bottom of the page (See [Clickable Footnotes](/css-polyfills.js/#section-footnotes)).
 
 Of course, there's much more that can be accomplished using [css-polyfills.js](/css-polyfills.js); check the [README.md](https://github.com/philschatz/css-polyfills.js) for more details.
 

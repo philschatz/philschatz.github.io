@@ -11,8 +11,9 @@ At [Connexions](http://cnx.org) we build textbooks. To do it we have roughly 4 s
 - Website
 
 As someone who uses GitHub and Travis daily, I wondered how much of this can GitHub (and Travis) do for us?
+It turns out, quite a bit. If each book is a repository whose contents is an _Unzipped EPUB_ then amazing things are possible.
 
-It turns out, quite a bit. If each book is a repository whose contents is an Unzipped EPUB:
+> Book Publishing = GitHub Repo + GitHub Pages + Download as Zip + Service Hooks
 
 - the `master` branch is the published version of the book
 - tags are various versions of a book
