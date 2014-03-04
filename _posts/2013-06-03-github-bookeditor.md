@@ -3,7 +3,7 @@ layout: post
 title: Building an eBook using GitHub
 ---
 
-At [Connexions](http://cnx.org) we build textbooks. To do it we have roughly 4 services:
+At [Connexions](http://cnx.org) we build free textbooks. To do it we have roughly 4 services:
 
 - Published Repository (Published Books)
 - Authoring Repository (Drafts)
