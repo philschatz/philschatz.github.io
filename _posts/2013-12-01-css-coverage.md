@@ -7,8 +7,8 @@ There are many CSS coverage projects but none plug **directly into JS unit tests
 
 Assuming you have BlanketJS and Mocha tests, just grab **[css-coverage.js](https://github.com/philschatz/css-coverage.js)** and add the following into the test harness HTML file :
 
-    <script src="css-coverage.js"></script>
     <link rel="stylesheet/coverage" href="path/to/file.less" />
+    <script src="css-coverage.js"></script>
 
 ## Less.js + Mocha + BlanketJS
 
