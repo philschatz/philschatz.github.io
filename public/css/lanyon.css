@@ -239,17 +239,19 @@ a.sidebar-nav-item:focus {
 }
 
 
-/* Add a "More" button to expand a post */
+/* Add a "Keep Reading" button to expand a post */
 .posts .post .more-checkbox,
 .posts .post .more-checkbox:not(:checked) ~ :not(:nth-child(-n+10)):not(.more-button),
-/* If the post is short, do not show the "More" button */
+/* If the post is short, hide the "Keep Reading" button */
 .posts .post .more-button:nth-child(-n+11),
-/* Hide the "More" button once it has been clicked */
+/* Hide the "Keep Reading" button once it has been clicked */
 .posts .post .more-checkbox:checked ~ .more-button {
   display: none;
 }
 
 .posts .post .more-button {
+  /* poole default link color */
+  color: #268bd2;
   cursor: pointer;
 }
 .posts .post .more-button:hover {
