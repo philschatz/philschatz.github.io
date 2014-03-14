@@ -38,7 +38,12 @@ To handle multiple HTML formats (EPUB, online, PDF) we came up with the idea of 
 
 Each book contains a very similar HTML structure (depending on the output format; PDF, EPUB, online) but very different styling (fonts, colors, numbering schemes) so we split the CSS into 2 types of files: **slots** for the styling and **skeletons** for the HTML structure and linked them together using a namespaced tree of mixins that represent the _logical_ structure of a book.
 
-In this way a page header would be defined as `#page>#top>.outside() { content: 'Chapter 1'; }` (slot) and used as `@page:left { @top-left: #page>#top>.outside(); }` (skeleton).
+In this way a page header would be defined as (the _slot_):
+
+    #page>#top>.outside() { content: 'Chapter 1'; }
+and used as (the _skeleton_):
+
+    @page:left { @top-left: #page>#top>.outside(); }
 
 This allows us to separate the styling (slots) from the content (skeleton).
 
