@@ -42,7 +42,7 @@ Now, we have something to work with.
 To make a _subfigure_ have a `yellow` border, the CSS would look something like:
 
     figure {
-      figure {                // The subfigure. See it's inside a figure
+      figure {                // Note: it's inside another figure
         border: 1px solid yellow;
       }
     }
@@ -62,7 +62,7 @@ and the skeleton and slots would look like:
     // The "slots" for a subfigure:
     #content {
       #figure {
-        .style(any; @part; figure)    { border: 1px solid yellow; }
+        .style(figure) { border: 1px solid yellow; }
       }
     }
 
@@ -140,15 +140,15 @@ Using this structure and the `.selector(@type)` and `.template(@type)` mixins we
       // The recusion step is in `.x-template-helper`
     }
 
-    // This was "assumed" above but is defined here.
-    // It is "called" in the `.selector()` mixin.
+    // This mixin was "assumed" above but is defined here.
+    // It is used in the `.selector()` mixin.
     .x-template-helper(@type) {
       .template(@type);
       // Recurse!
       .build-children(@all-types...);
     }
 
-In order to prevent an infinite loop, we can define a `@max-depth` and add a `@depth` param to the mixins:
+In order to prevent an infinite loop, we define a `@max-depth` and add a `@depth` param to the mixins:
 
     .build-children(0; ...) { } // base case
     .build-children(@depth; @type; @rest...) {
@@ -182,11 +182,16 @@ Which is the desired result.
 So far, we've ignored the `@kind` and `@part` parameters to mixins.
 In this section we can add them back in.
 
+The `@part` parameter describes which part of the book the content is in. Some examples are `preface`, `chapter`, or `appendix`. The `@kind` parameter describes the custom class on a piece of content. These are specific to a book (`.how-to` for physics or `.timeline` for a history book).
+
 To handle the `@part` (`preface`, `chapter`, `appendix`, etc) we merely need to add a `@part` parameter to `.build-children()`.
 
-To handle the `@kind` parameter we need to let the skeleton-generation code know what are all the possible classes (`@kind`) for a given type (`figure`, `example`, `section`, etc) are.
+To handle the `@kind` parameter we need to let the skeleton-generation code know what are all the possible classes (`@kind`) for a given type (`figure`, `example`, `section`, etc).
 
-To do this, we add a "function" mixin to the `#content` namespace which will "return" a list of classes for each type. For example, we could have several classes on a figure: `.full-width`and `.half-width`.
+To do this, we add a "function" mixin to the `#content` namespace which will "return" a list of classes for each type.
+Because these are specific to each book they are defined as a `#content.kinds(@type)` mixin that "returns" by setting a `@return` variable.
+
+For example, we could have several classes on a figure: `.full-width`and `.half-width`.
 
 The expected CSS would be:
 
@@ -197,7 +202,7 @@ To define these for the skeleton-generator and the add styling in the slots, it 
 
     #content {
       .kinds(figure) {
-        // all the possible classes on a `figure`:
+        // all the possible classes on a `figure` for this book:
         @return: 'full-width', 'half-width';
       }
 
@@ -207,16 +212,16 @@ To define these for the skeleton-generator and the add styling in the slots, it 
       }
     }
 
-We can add a `@kind` parameter to the definition of `.selector(@type)` and change the corresponding definitions of `.build-children()` and `.x-template-helper()`.
+Then, we can add a `@kind` parameter to the definition of `.selector(@type)` and change the corresponding definitions of `.build-children()` and `.x-template-helper()`.
 
 ## Custom classes in `@contexts...`
 
 So far, the `@contexts...` arguments only contain a list of types.
-For example, styling an `exercise` inside an `example` is done like this:
+For example, styling any `exercise` inside an `example` inside a `chapter` is done like this:
 
     #content {
       #exercise {
-        .style(any; @part; example) { ... }
+        .style(any; chapter; example) { ... }
       }
     }
 
