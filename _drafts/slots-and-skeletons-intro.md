@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building CSS skeletons and slots
+tags: css
 ---
 
 ## Simple Slots and Skeletons

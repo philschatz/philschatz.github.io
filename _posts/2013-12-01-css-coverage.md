@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSS Coverage for Javascript Unit Tests
+tags: css
 ---
 
 There are many CSS coverage projects but none plug **directly into JS unit tests**, instrumenting at the same time as the JavaScript coverage.

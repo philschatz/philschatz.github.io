@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building an eBook using GitHub
+tags: octokit
 ---
 
 At [Connexions](http://cnx.org) we build free textbooks. To do it we have roughly 4 services:

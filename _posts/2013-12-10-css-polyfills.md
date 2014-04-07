@@ -1,6 +1,7 @@
 ---
 layout: post
 title: css-polyfills.js do more with CSS!
+tags: css css-polyfills
 ---
 
 I often hear "CSS is meant to style and HTML should describe content", but CSS alone is not enough to make textbooks.

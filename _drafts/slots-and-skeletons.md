@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pattern matching with LESS (CSS)
+tags: css
 ---
 
 # Background

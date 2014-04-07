@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Skeleton Auto-generation
+tags: css
 ---
 
 In [Building CSS skeletons and slots](/2014/03/16/slots-and-skeletons-intro/) I showed how to style a piece of content based on where it occurs (the `@contexts...` parameters).
