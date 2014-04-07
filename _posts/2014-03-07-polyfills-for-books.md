@@ -1,13 +1,16 @@
-
+---
+layout: post
+title: css-polyfills for Books
+---
 
 
 ## "Why CSS instead of Javascript?""
 
-We want authors to customize their books but do not want them to write (or run) arbitrary JavaScript.
-
-Our books end up being published in various formats with various support for CSS.
+Wouldn't it be great if authors could customize their books without having them write (or run) arbitrary JavaScript? This post shows a way to do it.
 
 ## Our Problem
+
+Our books end up being published in various formats with various support for CSS.
 
 We use Docbook for PDFs partly because we need to move content around (ie collating exercises at the end of a chapter, making an index) and XSLT provides a way to move XML around.
 
@@ -47,7 +50,7 @@ Ideally, we would be able to get access to all of these unsupported selectors an
 
 ## The Solution
 
-Enter [CSS-Polyfills](/css-polyfills.js).
+Enter [CSS-Polyfills](/css-polyfills.js/).
 
 The project uses [LessCSS](http://lesscss.org) and [jQuery](http://jquery.org) to parse the CSS file and "bake" the changes into the HTML.
 
@@ -84,7 +87,7 @@ As a free perk, you can easily generate Coverage data for your CSS files by tran
 
 ### HTML+CSS Diffs
 
-To do regression tests on books we merely need to generate the "baked" HTML file twice, once with the old CSS and once with the new CSS.
+To do regression tests on books we merely need to generate the "baked" HTML file twice, once with the old CSS and once with the new CSS (all the styles are "baked" into `style="..."` attributes).
 Then, a quick XSLT file can compare the two and generate a version of the page with `<span>` tags marking the places where styling changed.
 
-See <https://github.com/philschatz/css-diff> for a package that does this.
+See <https://github.com/philschatz/css-diff.js> for a package that does this.
