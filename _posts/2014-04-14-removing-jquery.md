@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Removing jQuery, and adding Promises
-tags: javascript, octokit, css-polyfills
+tags: javascript octokit css-polyfills
 ---
 
 This weekend I decided to remove jQuery from 2 of my libraries: [css-polyfills.js](/css-polyfills.js/) and [octokit.js](https://github.com/philschatz/octokit.js).
