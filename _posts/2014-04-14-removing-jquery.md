@@ -8,26 +8,28 @@ This weekend I decided to remove jQuery from 2 of my libraries: [css-polyfills.j
 
 It was motivated by requests from octokit users and by the horrible performance of [css-polyfills.js](/css-polyfills.js/) on large textbooks (took ~1.5 hours).
 
-## Refactoring [Polyfills](/css-polyfills.js/)
+## Refactoring [css-polyfills.js](/css-polyfills.js/)
 
 I started with [you-might-not-need-jquery](http://youmightnotneedjquery.com/) and made incremental progress through the codebase. Initially my hope was to decrease the time by 50% but the refactor was only providing marginal improvements, until I hit the following line of code:
 
-    $('#' + id)
+    $el.find('#' + id)
 
-This uses Sizzle to find an element by id. As soon as I turned it into the following...
+This uses [Sizzle](http://sizzlejs.com) to find an element by id. As soon as I turned it into the following...
 
     document.getElementById(id)
 
 **BAM!** the time dropped from ~1.5 hours down to 4.5 _minutes_.
 
-**TODO:** Iterating over live `NodeList` objects (use `_.toArray()`)
+The other annoying bit was that the DOM sometimes returns a live list, meaning if you remove an element, it is directly reflected in the `NodeList`.
+
+To avoid the problem of iterating over live `NodeList` and removing some of them I wrapped it in `_.toArray()`.
 
 
 ## Refactoring [octokit.js](https://github.com/philschatz/octokit.js)
 
 This one was a bit easier.
 
-`octokit.js` uses 2 features in jQuery: `jQuery.ajax()` and `jQuery.Deferred`.
+[octokit.js](https://github.com/philschatz/octokit.js) uses 2 features in jQuery: `jQuery.ajax()` and `jQuery.Deferred`.
 
 ECMAScript 6 has native support for `Promise` (and the more fun generators) and it seems the `XMLHTTPRequest` object is not going away any time soon.
 
