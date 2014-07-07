@@ -8,6 +8,8 @@ Over the weekend I converted the entire Anatomy book from our new HTML format to
 
 Since [gh-pages](http://pages.github.com) automatically converts kramdown files to HTML using [jekyll](http://jekyllrb.com), I also created a minimalist [book reader](https://github.com/philschatz/book-viewer) and linked to it in the book.
 
+Click the screenshot to see [*the reader in action*](http://philschatz.com/anatomy-book/)!
+
 [![image](https://cloud.githubusercontent.com/assets/253202/3496567/d862235a-05e3-11e4-876e-80bdcf516938.png)](http://philschatz.com/anatomy-book/)
 
 # Features
@@ -28,7 +30,15 @@ Since [gh-pages](http://pages.github.com) automatically converts kramdown files 
 - [Anatomy & Physiology Reader](http://philschatz.com/anatomy-book/)
 - [Openstax College books using the **same** reader code](http://mountainbunker.org/~schatz/ed/simple-webview/) (loads archive.cnx.org)
 
-# GitHub.com features
+---
+
+# GitHub.com bonus features
+
+By using a Markdown variant instead of HTML, there are several things GitHub provides for free.
+
+- repo pages will render instead of just showing the markup
+- links between pages *just work*
+- diffs and Pull Requests render and add changebars/colors to make the changes clearer
 
 ## Clickable Table of Contents
 
