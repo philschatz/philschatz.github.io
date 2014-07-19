@@ -25,3 +25,8 @@
 }
 
 .post img { max-width: 100%; }
+
+.post:not(:first-of-type) {
+  border-top: 1px dotted #999;
+  padding-top: 40px;
+}
