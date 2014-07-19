@@ -6,11 +6,11 @@ tags: books
 
 Over the weekend I converted the entire Anatomy book from our new HTML format to [kramdown](http://kramdown.gettalong.org) (a Markdown variant that allows classes) and tossed it on GitHub.
 
-Since [gh-pages](http://pages.github.com) automatically converts kramdown files to HTML using [jekyll](http://jekyllrb.com), I also created a minimalist [book reader](https://github.com/philschatz/book-viewer) and linked to it in the book.
+Since [gh-pages](http://pages.github.com) automatically converts kramdown files to HTML using [jekyll](http://jekyllrb.com), I also created a [tiny book reader](https://github.com/philschatz/book-viewer) and linked to it in the book.
 
-Click the screenshot to see [*the reader in action*](http://philschatz.com/anatomy-book/)!
+Click the screenshot to [*read all the books!*](http://philschatz.com/books/)
 
-[![image](https://cloud.githubusercontent.com/assets/253202/3496567/d862235a-05e3-11e4-876e-80bdcf516938.png)](http://philschatz.com/anatomy-book/)
+[![image](https://cloud.githubusercontent.com/assets/253202/3496567/d862235a-05e3-11e4-876e-80bdcf516938.png)](http://philschatz.com/books/)
 
 # Features
 
@@ -21,14 +21,15 @@ Click the screenshot to see [*the reader in action*](http://philschatz.com/anato
 - Table of Contents shows pages you have read
 - spinner shows when page is loading
 - just 300 lines of code
-- works on any book hosted on *cnx.org* too! [Examples of all the Openstax College books books](http://mountainbunker.org/~schatz/ed/simple-webview/)
-- search button reuses the sidebar (mock for now)
+- works on any book hosted on *cnx.org* too! [Examples of all the Openstax College books](http://mountainbunker.org/~schatz/ed/simple-webview/)
+- search button reuses the Table of Contents
+- does not require building the files for `gh-pages` (unlike [GitBook](http://gitbook.io))
 
 # Book Reader Links
 
 - [reader code](https://github.com/philschatz/book-viewer) (it's in `./dist` because I'm lazy)
-- [Anatomy & Physiology Reader](http://philschatz.com/anatomy-book/)
-- [Openstax College books using the **same** reader code](http://mountainbunker.org/~schatz/ed/simple-webview/) (loads archive.cnx.org)
+- [reader for Openstax books hosted in GitHub](http://philschatz.com/books/)
+- [Openstax College books using the *same* reader code](http://mountainbunker.org/~schatz/ed/simple-webview/) (loads archive.cnx.org)
 
 ---
 
@@ -42,11 +43,11 @@ By using a Markdown variant instead of HTML, there are several things GitHub pro
 
 ## Clickable Table of Contents
 
-![image](https://cloud.githubusercontent.com/assets/253202/3496418/69b29f3a-05e2-11e4-8b72-de53ad718207.png)
+[![image](https://cloud.githubusercontent.com/assets/253202/3496418/69b29f3a-05e2-11e4-8b72-de53ad718207.png)](https://github.com/philschatz/anatomy-book/blob/gh-pages/SUMMARY.md)
 
 **Note:** `{: ...}` is kramdown's way of adding classes
 
-[The markup](https://github.com/philschatz/anatomy-book/blob/gh-pages/SUMMARY.md) (I moved intro modules into the chapter title):
+[The markup](https://github.com/philschatz/anatomy-book/blob/gh-pages/SUMMARY.md):
 
 
     ---
@@ -55,13 +56,13 @@ By using a Markdown variant instead of HTML, there are several things GitHub pro
 
     1.  {: .preface} [Preface](contents/m46844.md)
     2.  {: .part} Unit 1: Levels of Organization
-        1.  {: .chapter} [An Introduction to the Body](contents/m45981.md)
+        1.  {: .chapter} [An Introduction to the...](contents/m45981.md)
             1. [Overview of Anatomy and Physiology](contents/m45983.md)
-            2. [Structural Organization of the ...](contents/m45985.md)
+            2. [Structural Organization of the...](contents/m45985.md)
             3. [Functions of Human Life](contents/m45986.md)
 
-        2.  {: .chapter} [The Chemical Level of ...](contents/m45996.md)
-            1. [Elements and Atoms: The Building ...](contents/m45998.md)
+        2.  {: .chapter} [The Chemical Level of...](contents/m45996.md)
+            1. [Elements and Atoms: The Building...](contents/m45998.md)
             2. [Chemical Bonds](contents/m46000.md)
             3. [Chemical Reactions](contents/m46004.md)
 
@@ -81,26 +82,25 @@ and the [raw kramdown](https://raw.githubusercontent.com/philschatz/anatomy-book
 
     <div data-type="abstract" markdown="1">
     By the end of this section, you will be able to:
-    * Describe the bones that articulate together to form selected synovial
-      joints
+
+    * Describe the bones that articulate together to form selected...
     * Discuss the movements available at each joint
-    * Describe the structures that support and prevent excess movements at
-      each joint
+    * Describe the structures that support and prevent excess movements
 
     </div>
 
     # Articulations of the Vertebral Column
 
-    In addition to being held together by the intervertebral discs, adjacent
+    In addition to being held together by the intervertebral discs,
     vertebrae also articulate with each other at synovial joints formed
-    between the superior and inferior articular processes called <span
-    data-type="term">zygapophysial joints</span> (facet joints) (see
-    [link text](/m46383#fig-ch09_01_02)). These are
+    between the superior and inferior articular processes called
+    **zygapophysial joints**{: data-type="term" :} (facet joints) (see
+    [link text](m46383.md#fig-ch09_01_02)). These are
     plane joints that provide for only limited motions between the
-    vertebrae. The orientation of the articular processes at these joints
+    vertebrae. The orientation of the articular processes at these joint
     varies in different regions of the vertebral column and serves to
-    determine the types of motions available in each vertebral region. The
-    cervical and lumbar regions have the greatest ranges of motions.
+    determine the types of motions available in each vertebral region.
+    The cervical and lumbar regions have the greatest ranges of motions.
 
     ![Figure alt text](../resource/fig1.jpg "Figure caption"){: data-title="Figure Title" .half-page :}
 
