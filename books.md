@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "OpenStax Textbooks"
+title: "OpenStax Textbooks on GitHub"
 ---
 
 The following books are all licensed [CC-BY](http://creativecommons.org/licenses/by/4.0/)
