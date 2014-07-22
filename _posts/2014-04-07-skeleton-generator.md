@@ -6,6 +6,8 @@ tags: css
 
 In [Building CSS skeletons and slots](/2014/03/16/slots-and-skeletons-intro/) I showed how to style a piece of content based on where it occurs (the `@contexts...` parameters).
 
+The code can be found at **[philschatz/skeleton-generator.css](https://github.com/philschatz/skeleton-generator.css)**.
+
 Here's a discussion on the machinery needed to realize that.
 
 # Types and Templates
