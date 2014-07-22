@@ -241,7 +241,7 @@ a.sidebar-nav-item:focus {
 
 /* Add a "Keep Reading" button to expand a post */
 .posts .post .more-checkbox,
-.posts .post .more-checkbox:not(:checked) ~ :not(:nth-child(-n+10)):not(.more-button),
+.posts .post *:not(:nth-child(-n+10)):not(.more-button),
 /* If the post is short, hide the "Keep Reading" button */
 .posts .post .more-button:nth-child(-n+11),
 /* Hide the "Keep Reading" button once it has been clicked */

@@ -3,6 +3,23 @@ layout: default
 title: Home
 ---
 
+<h3>List of all Posts</h3>
+<ul class="all-posts">
+{% for post in site.posts %}
+  <li class="post-blurb">
+    <span>
+        <a href="{{ url_base }}{{ post.url }}">{{ post.title }}</a>
+    </span>
+    <span class="date">
+        {{ post.date | date_to_string }}
+    </span>
+  </li>
+{% endfor %}
+</ul>
+
+<hr/>
+
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -13,9 +30,8 @@ title: Home
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-    <input class="more-checkbox" type="checkbox" id="{{post.id | escape}}"/>
     {{ post.content }}
-    <label class="more-button" for="{{post.id | escape}}">Keep Reading...</label>
+    <a href="{{ post.url }}" class="more-button">Keep Reading...</a>
   </div>
   {% endfor %}
 </div>
@@ -36,4 +52,3 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-

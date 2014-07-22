@@ -13,6 +13,14 @@
 :target { background-color: #ffd; }
 
 
+/* List of posts */
+/* make date grey and small */
+.all-posts > .post-blurb > .date {
+  font-size: 50%;
+  color: #ccc;
+}
+
+
 /* styles for tags page */
 .inline-list li {
   list-style-type: none;
