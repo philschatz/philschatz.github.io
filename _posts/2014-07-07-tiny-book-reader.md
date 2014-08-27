@@ -70,7 +70,7 @@ By using a Markdown variant instead of HTML, there are several things GitHub pro
 
 The markdown files render on GitHub.com repo pages ([see example page on GitHub](https://github.com/philschatz/anatomy-book/blob/gh-pages/contents/m46377.md))
 
-![image](https://cloud.githubusercontent.com/assets/253202/3496428/7f327c7c-05e2-11e4-9c90-6a4dde496886.png)
+[![image](https://cloud.githubusercontent.com/assets/253202/3496428/7f327c7c-05e2-11e4-9c90-6a4dde496886.png)](https://github.com/philschatz/anatomy-book/blob/gh-pages/contents/m46377.md)
 
 and the [raw kramdown](https://raw.githubusercontent.com/philschatz/anatomy-book/gh-pages/contents/m46377.md):
 
@@ -109,7 +109,7 @@ and the [raw kramdown](https://raw.githubusercontent.com/philschatz/anatomy-book
 
 GitHub will also render the changes of kramdown files instead of showing a diff ([see example of deleting a chapter](https://github.com/philschatz/anatomy-book/commit/bd695b8c50bbdfccc4d892e521b7f8b48d1b55ba?short_path=b4f3573#diff-b4f3573b2f24d5af026c33acf52ff716))
 
-![image](https://cloud.githubusercontent.com/assets/253202/3496449/b512862a-05e2-11e4-8264-19ed006cfa77.png)
+[![image](https://cloud.githubusercontent.com/assets/253202/3496449/b512862a-05e2-11e4-8264-19ed006cfa77.png)](https://github.com/philschatz/anatomy-book/commit/bd695b8c50bbdfccc4d892e521b7f8b48d1b55ba?short_path=b4f3573#diff-b4f3573b2f24d5af026c33acf52ff716)
 
 
 # Notes
