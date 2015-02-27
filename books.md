@@ -12,5 +12,7 @@ The list of [OpenStax](http://cnx.org) Textbooks hosted on GitHub using [gh-page
 [![Biology Concepts](/biology-concepts-book/cover.png)](/biology-concepts-book/)
 [![Economics](/economics-book/cover.png)](/economics-book/)
 [![Physics](/physics-book/cover.png)](/physics-book/)
+[![Precalculus](/precalculus-book/cover.png)](/precalculus-book/)
 [![Sociology](/sociology-book/cover.png)](/sociology-book/)
 [![Statistics](/statistics-book/cover.png)](/statistics-book/)
+[![US History](/us-history-book/cover.png)](/us-history-book/)
