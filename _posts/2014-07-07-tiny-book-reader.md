@@ -7,33 +7,11 @@ tags: books
 Over the weekend I converted all of our popular textbooks from our new HTML format to [kramdown](http://kramdown.gettalong.org) (a Markdown variant that allows classes) and [tossed it on GitHub](http://philschatz.com/books/).
 
 Since [gh-pages](http://pages.github.com) automatically converts kramdown files to HTML using [jekyll](http://jekyllrb.com), I also created a [tiny book reader](https://github.com/philschatz/book-viewer) and linked to it in the book.
-
 Click the screenshot to [*read all the books!*](http://philschatz.com/books/)
 
 [![image](https://cloud.githubusercontent.com/assets/253202/3496567/d862235a-05e3-11e4-876e-80bdcf516938.png)](http://philschatz.com/books/)
 
-# Features
-
-- unobtrusive design
-- big next/prev buttons
-- reading progress bar
-- keyboard left/right buttons work
-- Table of Contents shows pages you have read
-- spinner shows when page is loading
-- just 300 lines of code
-- works on any book hosted on *cnx.org* too! [Examples of all the Openstax College books](http://mountainbunker.org/~schatz/ed/simple-webview/)
-- search button reuses the Table of Contents
-- does not require building the files for `gh-pages` (unlike [GitBook](http://gitbook.io))
-
-# Book Reader Links
-
-- [reader code](https://github.com/philschatz/book-viewer) (it's in `./dist` because I'm lazy)
-- [reader for Openstax books hosted in GitHub](http://philschatz.com/books/)
-- [Openstax College books using the *same* reader code](http://mountainbunker.org/~schatz/ed/simple-webview/) (loads archive.cnx.org)
-
----
-
-# GitHub.com bonus features
+# GitHub.com Bonus Features
 
 By using a Markdown variant instead of HTML, there are several things GitHub provides for free.
 
@@ -111,6 +89,24 @@ GitHub will also render the changes of kramdown files instead of showing a diff 
 
 [![image](https://cloud.githubusercontent.com/assets/253202/3496449/b512862a-05e2-11e4-8264-19ed006cfa77.png)](https://github.com/philschatz/anatomy-book/commit/bd695b8c50bbdfccc4d892e521b7f8b48d1b55ba?short_path=b4f3573#diff-b4f3573b2f24d5af026c33acf52ff716)
 
+# Features
+
+- unobtrusive design
+- big next/prev buttons
+- reading progress bar
+- keyboard left/right buttons work
+- Table of Contents shows pages you have read
+- spinner shows when page is loading
+- just 300 lines of code
+- works on any book hosted on *cnx.org* too! [Examples of all the Openstax College books](http://mountainbunker.org/~schatz/ed/simple-webview/)
+- search button reuses the Table of Contents
+- does not require building the files for `gh-pages` (unlike [GitBook](http://gitbook.io))
+
+# Book Reader Links
+
+- [reader code](https://github.com/philschatz/book-viewer) (it's in `./dist` because I'm lazy)
+- [reader for Openstax books hosted in GitHub](http://philschatz.com/books/)
+- [Openstax College books using the *same* reader code](http://mountainbunker.org/~schatz/ed/simple-webview/) (loads archive.cnx.org)
 
 # Notes
 
