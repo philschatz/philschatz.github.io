@@ -16,3 +16,4 @@ The list of [OpenStax](http://cnx.org) Textbooks hosted on GitHub using [gh-page
 [![Sociology](/sociology-book/cover.png)](/sociology-book/)
 [![Statistics](/statistics-book/cover.png)](/statistics-book/)
 [![US History](/us-history-book/cover.png)](/us-history-book/)
+[![Algebra and Trigonometry](/algebra-trigonometry-book/cover.png)](/algebra-trigonometry-book/)
