@@ -38,3 +38,71 @@
   border-top: 1px dotted #999;
   padding-top: 40px;
 }
+
+/*
+ * ==========================================
+ * Puzzlescript HTML Table styling
+ * ==========================================
+ */
+
+.ps-light { opacity: .5; }
+kbd.ps-help-key {
+  font: 11px "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: rgb(198, 203, 209);
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+table.ps-table {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+table tr td.ps-cell {
+    position: relative;
+    padding: 0;
+}
+td.ps-cell::after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+.ps-cell-label {
+    /* Move it off-screen so screenreaders read it but users do not see it */
+    position: absolute;
+    left:-9999px;
+}
+
+.ps-sprite-whole {
+    /* to make it square (depends on styling for "ps-cell") */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+}
+.ps-sprite-row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: nowrap
+}
+.ps-sprite-pixel { flex-grow: 1 }
