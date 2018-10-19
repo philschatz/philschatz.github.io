@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Make PuzzleScript Games Embeddable and Accessible
+title: Embeddable and Accessible PuzzleScript Games
 tags: puzzlescript
 ---
 
