@@ -10,6 +10,8 @@ I ❤️ Puzzle Games.
 
 Introducing: the [puzzlescript](https://github.com/philschatz/puzzlescript) package.
 
+[![a couple levels of the game Pot Wash Panic](https://user-images.githubusercontent.com/253202/47249708-7a204080-d3dc-11e8-8aee-73179c314a41.gif)](https://github.com/philschatz/puzzlescript)
+
 Many games have puzzles sprinkled in, but I like ones that are distilled into just solving puzzles.
 
 I first realized how engrossing these were while playing [The Witness](http://the-witness.net) with friends. One person would control the player but everyone would be solving the puzzle in their head just by watching. We played together for days.
@@ -23,11 +25,11 @@ Unlike other video games that tend to teach kids to memorize facts (like "Carmen
 Specifically, PuzzleScript games are interesting because the whole game is a text file and the levels are typically pretty small. This means it's easy for kids to explore but it also makes the games playable by people that can't see. The reason is that all of the sprites have human-readable names. So we can read those out instead of just showing colored pixels.
 
 
-# Background
+## Background
 
 Inspiration came from both the tons of easter-eggs found in software ([Chrome Dino Game](https://www.blog.google/products/chrome/chrome-dino/), [various Microsoft ones](https://en.wikipedia.org/wiki/List_of_Easter_eggs_in_Microsoft_products) and commandline tools) as well as a desire to get more people in general to play video games.
 
-# Goals
+## Goals
 
 - get kids in classrooms playing these games
 - get vision-impaired people playing these games
@@ -35,11 +37,11 @@ Inspiration came from both the tons of easter-eggs found in software ([Chrome Di
 - get people to play these instead of Sudoku to exercise their brains more
 
 
-# Try it out!
+## Try it out!
 
 Games can run embedded in a webpage **or** in a commandline terminal. There are **over 200 games** to choose from!
 
-## Terminal
+### Terminal
 
 All you need is [node 4 or higher](https://nodejs.org) and then run the following:
 
@@ -51,7 +53,7 @@ puzzlescript
 See [philschatz/puzzlescript](https://github.com/philschatz/puzzlescript#screencaps) for examples.
 
 
-## Embed in a Webpage
+### Embed in a Webpage
 
 ```html
 <body>
@@ -69,16 +71,26 @@ See [philschatz/puzzlescript](https://github.com/philschatz/puzzlescript#screenc
 
 Visit the [demo page](/puzzlescript/) to play several games (there are **over 200**), or see [this website's 404 page](/404) for an example of using it in a 404 page.
 
-# For Next Time
+## For Next Time
 
 I would like to go through more details on how the code is organized. But if something does not work or is not clear, [create an issue](https://github.com/philschatz/puzzlescript/issues)!
 
-# Implementation
+## More Examples
 
-The project is separated into different parts to make it easier to embed/extend. See the [documentation](/puzzlescript/docs/) for more info.
+Here are screencaps from a few more games
 
-- a Parser converts the PuzzleScript text file into a set of objects
-- a Compiler expands the rules into a simpler set of instructions
-- the Interpreter accepts inputs and evaluates the game logic to update the current level
-- a UI Renderer "draws" the sprites (either as colored ASCII characters when used on the command line, or as HTML cells in a Table when embedded on a webpage)
-- an Input handler interprets keystrokes or mouse clicks and calls the Interpreter
+### Mirror Isles ([original](http://www.draknek.org/games/puzzlescript/mirrors.php))
+
+![mirror-isles](https://user-images.githubusercontent.com/253202/47133542-ce0d1700-d26e-11e8-851f-233d27aaf0b8.gif)
+
+### Hack the Net ([original](http://www.draknek.org/games/puzzlescript/hack-the-net.php))
+
+<a href="https://asciinema.org/a/188016"><img width="300" alt="video of a couple levels of Hack-the-Net" src="https://asciinema.org/a/188016.png"/></a>
+
+### Skipping Stones to Lonely Homes ([original](http://www.draknek.org/games/puzzlescript/skipping-stones.php))
+
+<a href="https://asciinema.org/a/189279?t=20"><img width="300" alt="video of the beginning of Skipping Stones (BIG)" src="https://asciinema.org/a/189279.png"/></a>
+
+### Entanglement ([original](http://www.richardlocke.co.uk/release/entanglement/chapter-1/))
+
+<a href="https://asciinema.org/a/189281?t=23"><img width="300" alt="video of the beginning of Entanglement" src="https://asciinema.org/a/189281.png"/></a>
