@@ -73,24 +73,12 @@ Visit the [demo page](/puzzlescript/) to play several games (there are **over 20
 
 ## For Next Time
 
-I would like to go through more details on how the code is organized. But if something does not work or is not clear, [create an issue](https://github.com/philschatz/puzzlescript/issues)!
+I would like to go through more details on how the code is organized. But if something does not work or is not clear, [create an issue](https://github.com/philschatz/puzzlescript/issues).
 
 ## More Examples
-
-Here are screencaps from a few more games
 
 ### Mirror Isles ([original](http://www.draknek.org/games/puzzlescript/mirrors.php))
 
 ![mirror-isles](https://user-images.githubusercontent.com/253202/47133542-ce0d1700-d26e-11e8-851f-233d27aaf0b8.gif)
 
-### Hack the Net ([original](http://www.draknek.org/games/puzzlescript/hack-the-net.php))
-
-<a href="https://asciinema.org/a/188016"><img width="300" alt="video of a couple levels of Hack-the-Net" src="https://asciinema.org/a/188016.png"/></a>
-
-### Skipping Stones to Lonely Homes ([original](http://www.draknek.org/games/puzzlescript/skipping-stones.php))
-
-<a href="https://asciinema.org/a/189279?t=20"><img width="300" alt="video of the beginning of Skipping Stones (BIG)" src="https://asciinema.org/a/189279.png"/></a>
-
-### Entanglement ([original](http://www.richardlocke.co.uk/release/entanglement/chapter-1/))
-
-<a href="https://asciinema.org/a/189281?t=23"><img width="300" alt="video of the beginning of Entanglement" src="https://asciinema.org/a/189281.png"/></a>
+More examples can be found in the [README](https://github.com/philschatz/puzzlescript) or see the [demo page](/puzzlescript/) to play them in a browser.
