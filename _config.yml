@@ -21,3 +21,7 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/philschatz/philschatz.github.com
+
+# Jekyll skips dotfiles/dot-directories unless listed here
+include:
+  - .well-known
